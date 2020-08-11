@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { findByTestAtrr, checkProps } from './../../../utils';
 import SharedButton from './index';
 
-describe('SharedButton Compronent', () =>{
+describe('SharedButton Component', () =>{
 
     describe('Checking PropTypes', () => {
 
