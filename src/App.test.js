@@ -10,7 +10,6 @@ const setUp = (initialState = {}) => {
     return wrapper;
 };
 
-
 describe('App Component', () => {
     let wrapper;
     
@@ -34,4 +33,18 @@ describe('App Component', () => {
         const component = findByTestAtrr(wrapper, 'appComponent');
         expect(component.length).toBe(1);
     })
+
+    it('updatesState() should update as expected', () => {
+        let classInstance = wrapper.instance();
+        classInstance.updatesState();
+        const newState = classInstance.state.hideBtn;
+        expect(newState).toBe(true);
+    })
+
+    it('returnsAValue should return value as expected', () => {
+        let classInstance = wrapper.instance();
+        const newValue = classInstance.returnsAValue(6);
+        expect(newValue).toBe(7);
+    })
+
 })
